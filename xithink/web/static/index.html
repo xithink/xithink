@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#07111f" />
+  <title>XThink · 思维决策引擎</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="brand-row"><span class="pulse-dot"></span><strong>XThink</strong><span class="version">0.7</span></div>
+        <p>神经符号思维与决策引擎 · 实时语音对话实验台</p>
+      </div>
+      <div class="status" id="socketStatus">连接中…</div>
+    </header>
+
+    <section class="workspace">
+      <section class="conversation-card">
+        <div id="messages" class="messages" aria-live="polite">
+          <article class="message assistant">
+            <div class="avatar">X</div>
+            <div class="bubble">XThink 已启动。你可以输入文字，或点击麦克风进行连续语音对话。</div>
+          </article>
+        </div>
+
+        <div class="live-transcript" id="liveTranscript">等待语音输入…</div>
+
+        <form id="composer" class="composer">
+          <button id="micButton" class="round-button mic" type="button" title="开始语音对话" aria-label="开始语音对话">🎙</button>
+          <textarea id="messageInput" rows="2" placeholder="输入想法、事实、问题或故事大纲…"></textarea>
+          <button class="send-button" type="submit">发送</button>
+        </form>
+        <div class="voice-options">
+          <label><input id="autoSpeak" type="checkbox" checked /> 自动朗读回复</label>
+          <label><input id="continuousVoice" type="checkbox" checked /> 连续语音模式</label>
+          <label>思维循环 <input id="cycles" type="range" min="1" max="8" value="3" /><span id="cyclesValue">3</span></label>
+          <label>经历环境 <input id="environment" type="text" placeholder="如：实验室A / 城市 / 家庭" /></label>
+          <label>思维模型
+            <select id="profile">
+              <option value="balanced">平衡型</option>
+              <option value="conservative">谨慎型</option>
+              <option value="exploratory">探索型</option>
+            </select>
+          </label>
+        </div>
+        <div class="simulation-options">
+          <strong>人生经历模拟</strong>
+          <label>总经历 <input id="simExperiences" type="number" min="10" max="5000" step="10" value="1000" /></label>
+          <label>最大年龄 <input id="simMaxAge" type="number" min="10" max="100" step="10" value="40" /></label>
+          <label>随机种子 <input id="simSeed" type="number" value="20261001" /></label>
+          <label>怀疑度 <input id="simSkepticism" type="range" min="0" max="1" step="0.05" value="0.65" /><span id="simSkepticismValue">0.65</span></label>
+          <label>探索度 <input id="simExploration" type="range" min="0" max="1" step="0.05" value="0.75" /><span id="simExplorationValue">0.75</span></label>
+          <label>主动验证 <input id="simTesting" type="range" min="0" max="1" step="0.05" value="0.70" /><span id="simTestingValue">0.70</span></label>
+          <button id="runSimulation" class="send-button" type="button">运行年龄模拟</button>
+        </div>
+      </section>
+
+      <aside class="inspector-card">
+        <div class="inspector-tabs">
+          <button class="tab active" data-tab="semantic">语义结构</button>
+          <button class="tab" data-tab="thoughts">思维轨迹</button>
+          <button class="tab" data-tab="proof">符号证明</button>
+          <button class="tab" data-tab="cognition">三层记忆</button>
+          <button class="tab" data-tab="worldview">经验世界观</button>
+          <button class="tab" data-tab="evolution">规则演化</button>
+          <button class="tab" data-tab="growth">规则家谱/成长</button>
+        </div>
+        <div id="semanticPanel" class="panel active"><pre id="semanticJson">等待输入…</pre></div>
+        <div id="thoughtsPanel" class="panel"><div id="thoughtTrace" class="trace">等待思考…</div></div>
+        <div id="proofPanel" class="panel"><pre id="proofJson">等待符号证明链…</pre></div>
+        <div id="cognitionPanel" class="panel"><pre id="cognitionJson">等待长期记忆、经验记忆与潜意识激活…</pre></div>
+        <div id="worldviewPanel" class="panel"><pre id="worldviewJson">等待经验规则、个人符号与环境世界观…</pre></div>
+        <div id="evolutionPanel" class="panel"><pre id="evolutionJson">等待正例/反例、条件分裂与多视角逻辑链…</pre></div>
+        <div id="growthPanel" class="panel"><pre id="growthJson">等待规则家谱、主动验证与年龄模拟…</pre></div>
+      </aside>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

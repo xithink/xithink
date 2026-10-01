@@ -1,0 +1,24 @@
+[project]
+name = "xithink"
+version = "0.7.0"
+description = "XThink neuro-symbolic thought and decision engine"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn>=0.29",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27"]
+
+[project.scripts]
+xithink = "xithink.cli:main"
+xithink-web = "xithink.web.app:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

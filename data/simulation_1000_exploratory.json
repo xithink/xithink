@@ -1,0 +1,6469 @@
+{
+  "profile": {
+    "name": "exploratory",
+    "skepticism": 0.48,
+    "exploration": 0.94,
+    "rule_min_support": 2,
+    "rule_verification_confidence": 0.67,
+    "reject_counterexamples": 3,
+    "condition_min_support": 2,
+    "condition_verification_confidence": 0.66,
+    "condition_max_counterexample_rate": 0.18,
+    "active_test_aggressiveness": 0.94,
+    "active_test_budget": 5,
+    "max_condition_terms": 2,
+    "environment_diversity": 0.9,
+    "experience_noise": 0.09
+  },
+  "total_experiences": 1000,
+  "max_age": 40,
+  "seed": 20261001,
+  "checkpoints": [
+    {
+      "age": 0,
+      "experiences": 0,
+      "learned_candidates": 0,
+      "verified_rules": 0,
+      "evolved_variants": 0,
+      "active_evolved_rules": 0,
+      "genealogy_nodes": 0,
+      "genealogy_max_generation": 0,
+      "proposed_tests": 0,
+      "resolved_tests": 0,
+      "symbolic_accuracy": 0.0,
+      "abstention_accuracy": 1.0,
+      "contradiction_rate": 0.0,
+      "worldview_beliefs": 0,
+      "personal_symbols": 0,
+      "notes": [
+        "零经历阶段只测先验规则，不注入合成经验。"
+      ]
+    },
+    {
+      "age": 10,
+      "experiences": 250,
+      "learned_candidates": 2,
+      "verified_rules": 0,
+      "evolved_variants": 7,
+      "active_evolved_rules": 6,
+      "genealogy_nodes": 79,
+      "genealogy_max_generation": 12,
+      "proposed_tests": 5,
+      "resolved_tests": 8,
+      "symbolic_accuracy": 1.0,
+      "abstention_accuracy": 1.0,
+      "contradiction_rate": 0.0,
+      "worldview_beliefs": 30,
+      "personal_symbols": 2,
+      "notes": [
+        "同一留出题集用于不同年龄检查点，便于比较经验增长造成的变化。"
+      ]
+    },
+    {
+      "age": 20,
+      "experiences": 500,
+      "learned_candidates": 2,
+      "verified_rules": 0,
+      "evolved_variants": 7,
+      "active_evolved_rules": 6,
+      "genealogy_nodes": 158,
+      "genealogy_max_generation": 22,
+      "proposed_tests": 3,
+      "resolved_tests": 10,
+      "symbolic_accuracy": 1.0,
+      "abstention_accuracy": 1.0,
+      "contradiction_rate": 0.0,
+      "worldview_beliefs": 30,
+      "personal_symbols": 2,
+      "notes": [
+        "同一留出题集用于不同年龄检查点，便于比较经验增长造成的变化。"
+      ]
+    },
+    {
+      "age": 30,
+      "experiences": 750,
+      "learned_candidates": 2,
+      "verified_rules": 0,
+      "evolved_variants": 7,
+      "active_evolved_rules": 6,
+      "genealogy_nodes": 236,
+      "genealogy_max_generation": 32,
+      "proposed_tests": 3,
+      "resolved_tests": 10,
+      "symbolic_accuracy": 1.0,
+      "abstention_accuracy": 1.0,
+      "contradiction_rate": 0.0,
+      "worldview_beliefs": 30,
+      "personal_symbols": 2,
+      "notes": [
+        "同一留出题集用于不同年龄检查点，便于比较经验增长造成的变化。"
+      ]
+    },
+    {
+      "age": 40,
+      "experiences": 1000,
+      "learned_candidates": 2,
+      "verified_rules": 0,
+      "evolved_variants": 7,
+      "active_evolved_rules": 6,
+      "genealogy_nodes": 315,
+      "genealogy_max_generation": 42,
+      "proposed_tests": 3,
+      "resolved_tests": 10,
+      "symbolic_accuracy": 1.0,
+      "abstention_accuracy": 1.0,
+      "contradiction_rate": 0.0,
+      "worldview_beliefs": 30,
+      "personal_symbols": 2,
+      "notes": [
+        "同一留出题集用于不同年龄检查点，便于比较经验增长造成的变化。"
+      ]
+    }
+  ],
+  "final_genealogy": {
+    "nodes": [
+      {
+        "id": "gene:53fbc195f04c95baf3",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:f9f7abb2e78f1c3ad4"
+        ],
+        "generation": 15,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 185,
+        "counterexamples": 215,
+        "confidence": 0.4626865671641791,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:9c206647577accf0e6",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:35333c47e34a14f78e"
+        ],
+        "generation": 15,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 60,
+        "counterexamples": 4,
+        "confidence": 0.9242424242424242,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 60/185，对侧命中 4/215，区分度 0.75，例外率 6.25%。"
+      },
+      {
+        "id": "gene:4f7c5fa7ff54758126",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:3f5a705f005723d65a"
+        ],
+        "generation": 16,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 58,
+        "counterexamples": 4,
+        "confidence": 0.921875,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 58/189，对侧命中 4/161，区分度 0.74，例外率 6.45%。"
+      },
+      {
+        "id": "gene:badf2d350cad96c6ef",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:70935074190f281096"
+        ],
+        "generation": 16,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 56,
+        "counterexamples": 5,
+        "confidence": 0.9047619047619048,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 56/173，对侧命中 5/202，区分度 0.75，例外率 8.20%。"
+      },
+      {
+        "id": "gene:09a524132fc4b1e93d",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:fc2c25f6960c14cc06"
+        ],
+        "generation": 16,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 50,
+        "counterexamples": 6,
+        "confidence": 0.8793103448275862,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 50/173，对侧命中 6/202，区分度 0.73，例外率 10.71%。"
+      },
+      {
+        "id": "gene:2e3c873294e12be5d3",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:21950d093a081e799e"
+        ],
+        "generation": 16,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 57,
+        "counterexamples": 3,
+        "confidence": 0.9354838709677419,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 57/215，对侧命中 3/185，区分度 0.73，例外率 5.00%。"
+      },
+      {
+        "id": "gene:9e02638e1302c0bf35",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:7a8fceba01fc8759be"
+        ],
+        "generation": 16,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 78,
+        "counterexamples": 6,
+        "confidence": 0.9186046511627907,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 78/215，对侧命中 6/185，区分度 0.76，例外率 7.14%。"
+      },
+      {
+        "id": "gene:e147bb545000c4aa51",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:313edda9ffbcaa76b5"
+        ],
+        "generation": 16,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 232,
+        "counterexamples": 193,
+        "confidence": 0.5456674473067916,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:0e8eda638edb8b5e26",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:53fbc195f04c95baf3"
+        ],
+        "generation": 16,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 193,
+        "counterexamples": 232,
+        "confidence": 0.45433255269320844,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:523e09a60a0f0025b7",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:9c206647577accf0e6"
+        ],
+        "generation": 16,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 61,
+        "counterexamples": 4,
+        "confidence": 0.9253731343283582,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 61/193，对侧命中 4/232，区分度 0.75，例外率 6.15%。"
+      },
+      {
+        "id": "gene:9b4bcfd6f9a8086f5e",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:4f7c5fa7ff54758126"
+        ],
+        "generation": 17,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 61,
+        "counterexamples": 4,
+        "confidence": 0.9253731343283582,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 61/202，对侧命中 4/173，区分度 0.74，例外率 6.15%。"
+      },
+      {
+        "id": "gene:6dbf9db5d9c33126ba",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:badf2d350cad96c6ef"
+        ],
+        "generation": 17,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 58,
+        "counterexamples": 5,
+        "confidence": 0.9076923076923077,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 58/185，对侧命中 5/215，区分度 0.74，例外率 7.94%。"
+      },
+      {
+        "id": "gene:83d002bfa14e9b2dd7",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:09a524132fc4b1e93d"
+        ],
+        "generation": 17,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 54,
+        "counterexamples": 6,
+        "confidence": 0.8870967741935484,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 54/185，对侧命中 6/215，区分度 0.73，例外率 10.00%。"
+      },
+      {
+        "id": "gene:9b639d264e69ebf5b9",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:2e3c873294e12be5d3"
+        ],
+        "generation": 17,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 64,
+        "counterexamples": 3,
+        "confidence": 0.9420289855072463,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 64/232，对侧命中 3/193，区分度 0.74，例外率 4.48%。"
+      },
+      {
+        "id": "gene:53143a856491bdc720",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:9e02638e1302c0bf35"
+        ],
+        "generation": 17,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 80,
+        "counterexamples": 6,
+        "confidence": 0.9204545454545454,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 80/232，对侧命中 6/193，区分度 0.75，例外率 6.98%。"
+      },
+      {
+        "id": "gene:33c11ade6500d03721",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:e147bb545000c4aa51"
+        ],
+        "generation": 17,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 242,
+        "counterexamples": 208,
+        "confidence": 0.5376106194690266,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:c6c122a80444577db6",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:0e8eda638edb8b5e26"
+        ],
+        "generation": 17,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 208,
+        "counterexamples": 242,
+        "confidence": 0.46238938053097345,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:fe293cc3bd25aaf59c",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:523e09a60a0f0025b7"
+        ],
+        "generation": 17,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 66,
+        "counterexamples": 4,
+        "confidence": 0.9305555555555556,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 66/208，对侧命中 4/242，区分度 0.75，例外率 5.71%。"
+      },
+      {
+        "id": "gene:714b769cd8c1079b19",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:9b4bcfd6f9a8086f5e"
+        ],
+        "generation": 18,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 65,
+        "counterexamples": 4,
+        "confidence": 0.9295774647887324,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 65/215，对侧命中 4/185，区分度 0.74，例外率 5.80%。"
+      },
+      {
+        "id": "gene:cca4fb4bebb45576d9",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:6dbf9db5d9c33126ba"
+        ],
+        "generation": 18,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 64,
+        "counterexamples": 6,
+        "confidence": 0.9027777777777778,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 64/193，对侧命中 6/232，区分度 0.75，例外率 8.57%。"
+      },
+      {
+        "id": "gene:4c070857ad6f8b4361",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:83d002bfa14e9b2dd7"
+        ],
+        "generation": 18,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 55,
+        "counterexamples": 7,
+        "confidence": 0.875,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 55/193，对侧命中 7/232，区分度 0.73，例外率 11.29%。"
+      },
+      {
+        "id": "gene:bf2c419e3208fc4241",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:9b639d264e69ebf5b9"
+        ],
+        "generation": 18,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 67,
+        "counterexamples": 5,
+        "confidence": 0.918918918918919,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 67/242，对侧命中 5/208，区分度 0.73，例外率 6.94%。"
+      },
+      {
+        "id": "gene:e556c63e75b657ef24",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:53143a856491bdc720"
+        ],
+        "generation": 18,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 83,
+        "counterexamples": 7,
+        "confidence": 0.9130434782608695,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 83/242，对侧命中 7/208，区分度 0.75，例外率 7.78%。"
+      },
+      {
+        "id": "gene:66d8978b1daaf38d37",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:33c11ade6500d03721"
+        ],
+        "generation": 18,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 255,
+        "counterexamples": 220,
+        "confidence": 0.5366876310272537,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:c6829b0415a79a6f2e",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:c6c122a80444577db6"
+        ],
+        "generation": 18,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 220,
+        "counterexamples": 255,
+        "confidence": 0.46331236897274636,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:40ae1e5bfd2adf9355",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:fe293cc3bd25aaf59c"
+        ],
+        "generation": 18,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 72,
+        "counterexamples": 4,
+        "confidence": 0.9358974358974359,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 72/220，对侧命中 4/255，区分度 0.75，例外率 5.26%。"
+      },
+      {
+        "id": "gene:fa2a27acfdbcfb1e1e",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:714b769cd8c1079b19"
+        ],
+        "generation": 19,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 71,
+        "counterexamples": 4,
+        "confidence": 0.935064935064935,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 71/232，对侧命中 4/193，区分度 0.74，例外率 5.33%。"
+      },
+      {
+        "id": "gene:4570219942bd015b59",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:cca4fb4bebb45576d9"
+        ],
+        "generation": 19,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 68,
+        "counterexamples": 7,
+        "confidence": 0.8961038961038961,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 68/208，对侧命中 7/242，区分度 0.75，例外率 9.33%。"
+      },
+      {
+        "id": "gene:84285c56b184b76a13",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:4c070857ad6f8b4361"
+        ],
+        "generation": 19,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 58,
+        "counterexamples": 7,
+        "confidence": 0.8805970149253731,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 58/208，对侧命中 7/242，区分度 0.73，例外率 10.77%。"
+      },
+      {
+        "id": "gene:f60461238509d9bc2a",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:bf2c419e3208fc4241"
+        ],
+        "generation": 19,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 69,
+        "counterexamples": 5,
+        "confidence": 0.9210526315789473,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 69/255，对侧命中 5/220，区分度 0.73，例外率 6.76%。"
+      },
+      {
+        "id": "gene:8dba070b5f6bd141a6",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:e556c63e75b657ef24"
+        ],
+        "generation": 19,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 85,
+        "counterexamples": 7,
+        "confidence": 0.9148936170212766,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 85/255，对侧命中 7/220，区分度 0.75，例外率 7.61%。"
+      },
+      {
+        "id": "gene:82b6d0819d82b6e183",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:66d8978b1daaf38d37"
+        ],
+        "generation": 19,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 265,
+        "counterexamples": 235,
+        "confidence": 0.5298804780876494,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:b74422d8f8e9f6c128",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:c6829b0415a79a6f2e"
+        ],
+        "generation": 19,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 235,
+        "counterexamples": 265,
+        "confidence": 0.4701195219123506,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:afd0dba0bef9b57392",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:40ae1e5bfd2adf9355"
+        ],
+        "generation": 19,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 77,
+        "counterexamples": 4,
+        "confidence": 0.9397590361445783,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 77/235，对侧命中 4/265，区分度 0.75，例外率 4.94%。"
+      },
+      {
+        "id": "gene:7b78789f2a465cd85c",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:fa2a27acfdbcfb1e1e"
+        ],
+        "generation": 20,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 74,
+        "counterexamples": 4,
+        "confidence": 0.9375,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 74/242，对侧命中 4/208，区分度 0.74，例外率 5.13%。"
+      },
+      {
+        "id": "gene:f3ad56e05c9d137c0a",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:4570219942bd015b59"
+        ],
+        "generation": 20,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 72,
+        "counterexamples": 7,
+        "confidence": 0.9012345679012346,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 72/220，对侧命中 7/255，区分度 0.75，例外率 8.86%。"
+      },
+      {
+        "id": "gene:621ccf18947036fd3f",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:84285c56b184b76a13"
+        ],
+        "generation": 20,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 60,
+        "counterexamples": 8,
+        "confidence": 0.8714285714285714,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 60/220，对侧命中 8/255，区分度 0.73，例外率 11.76%。"
+      },
+      {
+        "id": "gene:9c408db430222719ef",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:f60461238509d9bc2a"
+        ],
+        "generation": 20,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 71,
+        "counterexamples": 5,
+        "confidence": 0.9230769230769231,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 71/265，对侧命中 5/235，区分度 0.73，例外率 6.58%。"
+      },
+      {
+        "id": "gene:8208be8085e38123d7",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:8dba070b5f6bd141a6"
+        ],
+        "generation": 20,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 88,
+        "counterexamples": 7,
+        "confidence": 0.9175257731958762,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 88/265，对侧命中 7/235，区分度 0.75，例外率 7.37%。"
+      },
+      {
+        "id": "gene:c98ed1ce49771c4fb6",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:82b6d0819d82b6e183"
+        ],
+        "generation": 20,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 281,
+        "counterexamples": 244,
+        "confidence": 0.5351043643263758,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:7d912ad5715a054b1c",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:b74422d8f8e9f6c128"
+        ],
+        "generation": 20,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 244,
+        "counterexamples": 281,
+        "confidence": 0.4648956356736243,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:5240df2c48329b9eb5",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:afd0dba0bef9b57392"
+        ],
+        "generation": 20,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 80,
+        "counterexamples": 4,
+        "confidence": 0.9418604651162791,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 80/244，对侧命中 4/281，区分度 0.76，例外率 4.76%。"
+      },
+      {
+        "id": "gene:cb13416cbe3e1a54eb",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:7b78789f2a465cd85c"
+        ],
+        "generation": 21,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 82,
+        "counterexamples": 4,
+        "confidence": 0.9431818181818182,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 82/255，对侧命中 4/220，区分度 0.75，例外率 4.65%。"
+      },
+      {
+        "id": "gene:219b8cfb0899ecf62a",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:f3ad56e05c9d137c0a"
+        ],
+        "generation": 21,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 76,
+        "counterexamples": 8,
+        "confidence": 0.8953488372093024,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 76/235，对侧命中 8/265，区分度 0.74，例外率 9.52%。"
+      },
+      {
+        "id": "gene:fe310217d5076cc2e9",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:621ccf18947036fd3f"
+        ],
+        "generation": 21,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 66,
+        "counterexamples": 8,
+        "confidence": 0.881578947368421,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 66/235，对侧命中 8/265，区分度 0.73，例外率 10.81%。"
+      },
+      {
+        "id": "gene:a56d22bff7429b9716",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:9c408db430222719ef"
+        ],
+        "generation": 21,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 75,
+        "counterexamples": 5,
+        "confidence": 0.926829268292683,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 75/281，对侧命中 5/244，区分度 0.73，例外率 6.25%。"
+      },
+      {
+        "id": "gene:424c1a02fb429a6b55",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:8208be8085e38123d7"
+        ],
+        "generation": 21,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 92,
+        "counterexamples": 7,
+        "confidence": 0.9207920792079208,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 92/281，对侧命中 7/244，区分度 0.75，例外率 7.07%。"
+      },
+      {
+        "id": "gene:a487b4fd4bed08f167",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:c98ed1ce49771c4fb6"
+        ],
+        "generation": 21,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 294,
+        "counterexamples": 256,
+        "confidence": 0.5344202898550725,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:df219499800ab59cfe",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:7d912ad5715a054b1c"
+        ],
+        "generation": 21,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 256,
+        "counterexamples": 294,
+        "confidence": 0.46557971014492755,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:24dd4f8e6a1e93db69",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:5240df2c48329b9eb5"
+        ],
+        "generation": 21,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 89,
+        "counterexamples": 5,
+        "confidence": 0.9375,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 89/256，对侧命中 5/294，区分度 0.76，例外率 5.32%。"
+      },
+      {
+        "id": "gene:eb78bf6b61dacf6ba0",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:cb13416cbe3e1a54eb"
+        ],
+        "generation": 22,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 86,
+        "counterexamples": 4,
+        "confidence": 0.9456521739130435,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 86/265，对侧命中 4/235，区分度 0.75，例外率 4.44%。"
+      },
+      {
+        "id": "gene:5bc2a8606f6dff289e",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:219b8cfb0899ecf62a"
+        ],
+        "generation": 22,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 79,
+        "counterexamples": 8,
+        "confidence": 0.898876404494382,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 79/244，对侧命中 8/281，区分度 0.74，例外率 9.20%。"
+      },
+      {
+        "id": "gene:5a7867565d36328fb4",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:fe310217d5076cc2e9"
+        ],
+        "generation": 22,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 69,
+        "counterexamples": 8,
+        "confidence": 0.8860759493670886,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 69/244，对侧命中 8/281，区分度 0.73，例外率 10.39%。"
+      },
+      {
+        "id": "gene:0955bf8bcfc4828063",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:a56d22bff7429b9716"
+        ],
+        "generation": 22,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 82,
+        "counterexamples": 6,
+        "confidence": 0.9222222222222223,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 82/294，对侧命中 6/256，区分度 0.73，例外率 6.82%。"
+      },
+      {
+        "id": "gene:d0c8618f169d49f9ab",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:424c1a02fb429a6b55"
+        ],
+        "generation": 22,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 93,
+        "counterexamples": 7,
+        "confidence": 0.9215686274509803,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 93/294，对侧命中 7/256，区分度 0.74，例外率 7.00%。"
+      },
+      {
+        "id": "gene:3d2a72a5f7a8d294be",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:a487b4fd4bed08f167"
+        ],
+        "generation": 22,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 309,
+        "counterexamples": 266,
+        "confidence": 0.537261698440208,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:f80a728fcd92d0df29",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:df219499800ab59cfe"
+        ],
+        "generation": 22,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 266,
+        "counterexamples": 309,
+        "confidence": 0.462738301559792,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:20eb792443283ca121",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:24dd4f8e6a1e93db69"
+        ],
+        "generation": 22,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 94,
+        "counterexamples": 6,
+        "confidence": 0.9313725490196079,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 94/266，对侧命中 6/309，区分度 0.76，例外率 6.00%。"
+      },
+      {
+        "id": "gene:25e87ca3e0a8e21da0",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:eb78bf6b61dacf6ba0"
+        ],
+        "generation": 23,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 94,
+        "counterexamples": 4,
+        "confidence": 0.95,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 94/281，对侧命中 4/244，区分度 0.76，例外率 4.08%。"
+      },
+      {
+        "id": "gene:94bfb12ef6b4cbdaf9",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:5bc2a8606f6dff289e"
+        ],
+        "generation": 23,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 81,
+        "counterexamples": 8,
+        "confidence": 0.9010989010989011,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 81/256，对侧命中 8/294，区分度 0.74，例外率 8.99%。"
+      },
+      {
+        "id": "gene:cfd5d964f750037883",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:5a7867565d36328fb4"
+        ],
+        "generation": 23,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 69,
+        "counterexamples": 9,
+        "confidence": 0.875,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 69/256，对侧命中 9/294，区分度 0.72，例外率 11.54%。"
+      },
+      {
+        "id": "gene:895274ebe767be0c1d",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:0955bf8bcfc4828063"
+        ],
+        "generation": 23,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 88,
+        "counterexamples": 6,
+        "confidence": 0.9270833333333334,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 88/309，对侧命中 6/266，区分度 0.74，例外率 6.38%。"
+      },
+      {
+        "id": "gene:8b2afc42eb4d7ad722",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:d0c8618f169d49f9ab"
+        ],
+        "generation": 23,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 97,
+        "counterexamples": 8,
+        "confidence": 0.9158878504672897,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 97/309，对侧命中 8/266，区分度 0.74，例外率 7.62%。"
+      },
+      {
+        "id": "gene:cb4b9363ae21a12bc2",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:3d2a72a5f7a8d294be"
+        ],
+        "generation": 23,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 321,
+        "counterexamples": 279,
+        "confidence": 0.5348837209302325,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:4d1e675be74a723007",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:f80a728fcd92d0df29"
+        ],
+        "generation": 23,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 279,
+        "counterexamples": 321,
+        "confidence": 0.46511627906976744,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:a5033e3ecb68e5e5a9",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:20eb792443283ca121"
+        ],
+        "generation": 23,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 98,
+        "counterexamples": 6,
+        "confidence": 0.9339622641509434,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 98/279，对侧命中 6/321，区分度 0.76，例外率 5.77%。"
+      },
+      {
+        "id": "gene:4c7c13a7f704251860",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:25e87ca3e0a8e21da0"
+        ],
+        "generation": 24,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 97,
+        "counterexamples": 4,
+        "confidence": 0.9514563106796117,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 97/294，对侧命中 4/256，区分度 0.76，例外率 3.96%。"
+      },
+      {
+        "id": "gene:ee2d60a632218933a9",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:94bfb12ef6b4cbdaf9"
+        ],
+        "generation": 24,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 85,
+        "counterexamples": 8,
+        "confidence": 0.9052631578947369,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 85/266，对侧命中 8/309，区分度 0.75，例外率 8.60%。"
+      },
+      {
+        "id": "gene:dcf1a2d7dd82a10e69",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:895274ebe767be0c1d"
+        ],
+        "generation": 24,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 92,
+        "counterexamples": 7,
+        "confidence": 0.9207920792079208,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 92/321，对侧命中 7/279，区分度 0.73，例外率 7.07%。"
+      },
+      {
+        "id": "gene:043cb863b3e43095c0",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:8b2afc42eb4d7ad722"
+        ],
+        "generation": 24,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 99,
+        "counterexamples": 8,
+        "confidence": 0.9174311926605505,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 99/321，对侧命中 8/279，区分度 0.74，例外率 7.48%。"
+      },
+      {
+        "id": "gene:23412cb6f11074dde6",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:cfd5d964f750037883"
+        ],
+        "generation": 24,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 74,
+        "counterexamples": 10,
+        "confidence": 0.872093023255814,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 74/279，对侧命中 10/321，区分度 0.72，例外率 11.90%。"
+      },
+      {
+        "id": "gene:2c5937d708da85a931",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:cb4b9363ae21a12bc2"
+        ],
+        "generation": 24,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 338,
+        "counterexamples": 287,
+        "confidence": 0.5406698564593302,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:9956656d3ba019ed94",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:4d1e675be74a723007"
+        ],
+        "generation": 24,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 287,
+        "counterexamples": 338,
+        "confidence": 0.45933014354066987,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:b0bc92422f7d0cae10",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:a5033e3ecb68e5e5a9"
+        ],
+        "generation": 24,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 103,
+        "counterexamples": 7,
+        "confidence": 0.9285714285714286,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 103/287，对侧命中 7/338，区分度 0.76，例外率 6.36%。"
+      },
+      {
+        "id": "gene:593a3e5f33e39168ed",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:4c7c13a7f704251860"
+        ],
+        "generation": 25,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 101,
+        "counterexamples": 4,
+        "confidence": 0.9532710280373832,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 101/309，对侧命中 4/266，区分度 0.75，例外率 3.81%。"
+      },
+      {
+        "id": "gene:b2def12c3f6c1bf95b",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:ee2d60a632218933a9"
+        ],
+        "generation": 25,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 87,
+        "counterexamples": 8,
+        "confidence": 0.9072164948453608,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 87/279，对侧命中 8/321，区分度 0.74，例外率 8.42%。"
+      },
+      {
+        "id": "gene:050a0a2e6fccdfcab7",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:dcf1a2d7dd82a10e69"
+        ],
+        "generation": 25,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 99,
+        "counterexamples": 7,
+        "confidence": 0.9259259259259259,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 99/338，对侧命中 7/287，区分度 0.74，例外率 6.60%。"
+      },
+      {
+        "id": "gene:a168feb5b1778f1ade",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:043cb863b3e43095c0"
+        ],
+        "generation": 25,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 105,
+        "counterexamples": 9,
+        "confidence": 0.9137931034482759,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 105/338，对侧命中 9/287，区分度 0.74，例外率 7.89%。"
+      },
+      {
+        "id": "gene:430ea2abbdfe991fde",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:2c5937d708da85a931"
+        ],
+        "generation": 25,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 348,
+        "counterexamples": 302,
+        "confidence": 0.5352760736196319,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:ec87e358723539fbe6",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:9956656d3ba019ed94"
+        ],
+        "generation": 25,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 302,
+        "counterexamples": 348,
+        "confidence": 0.4647239263803681,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:2f72d341577c304128",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:b0bc92422f7d0cae10"
+        ],
+        "generation": 25,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 108,
+        "counterexamples": 7,
+        "confidence": 0.9316239316239316,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 108/302，对侧命中 7/348，区分度 0.76，例外率 6.09%。"
+      },
+      {
+        "id": "gene:9d7d5bbc79f9e73fa9",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:23412cb6f11074dde6"
+        ],
+        "generation": 25,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 79,
+        "counterexamples": 10,
+        "confidence": 0.8791208791208791,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 79/302，对侧命中 10/348，区分度 0.72，例外率 11.24%。"
+      },
+      {
+        "id": "gene:b60e87704b845bb0b1",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:593a3e5f33e39168ed"
+        ],
+        "generation": 26,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 106,
+        "counterexamples": 5,
+        "confidence": 0.9469026548672567,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 106/321，对侧命中 5/279，区分度 0.75，例外率 4.50%。"
+      },
+      {
+        "id": "gene:1b19f2ad45a12b7f6e",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:b2def12c3f6c1bf95b"
+        ],
+        "generation": 26,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 89,
+        "counterexamples": 9,
+        "confidence": 0.9,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 89/287，对侧命中 9/338，区分度 0.74，例外率 9.18%。"
+      },
+      {
+        "id": "gene:7ff463583886127e92",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:050a0a2e6fccdfcab7"
+        ],
+        "generation": 26,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 102,
+        "counterexamples": 8,
+        "confidence": 0.9196428571428571,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 102/348，对侧命中 8/302，区分度 0.74，例外率 7.27%。"
+      },
+      {
+        "id": "gene:56ba6abd02ca5906e5",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:a168feb5b1778f1ade"
+        ],
+        "generation": 26,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 110,
+        "counterexamples": 9,
+        "confidence": 0.9173553719008265,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 110/348，对侧命中 9/302，区分度 0.74，例外率 7.56%。"
+      },
+      {
+        "id": "gene:b9c9a4d2dae89ff56c",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:430ea2abbdfe991fde"
+        ],
+        "generation": 26,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 359,
+        "counterexamples": 316,
+        "confidence": 0.5317577548005908,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:c0ed0398bd044046d6",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:ec87e358723539fbe6"
+        ],
+        "generation": 26,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 316,
+        "counterexamples": 359,
+        "confidence": 0.46824224519940916,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:801ea8b582df7b6dbf",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:2f72d341577c304128"
+        ],
+        "generation": 26,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 113,
+        "counterexamples": 7,
+        "confidence": 0.9344262295081968,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 113/316，对侧命中 7/359，区分度 0.76，例外率 5.83%。"
+      },
+      {
+        "id": "gene:fae3c7f00c65dae235",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:9d7d5bbc79f9e73fa9"
+        ],
+        "generation": 26,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 84,
+        "counterexamples": 10,
+        "confidence": 0.8854166666666666,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 84/316，对侧命中 10/359，区分度 0.72，例外率 10.64%。"
+      },
+      {
+        "id": "gene:53ea4b2ef4cd3313e5",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:b60e87704b845bb0b1"
+        ],
+        "generation": 27,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 108,
+        "counterexamples": 5,
+        "confidence": 0.9478260869565217,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 108/338，对侧命中 5/287，区分度 0.75，例外率 4.42%。"
+      },
+      {
+        "id": "gene:02e51498e2e845bf30",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:1b19f2ad45a12b7f6e"
+        ],
+        "generation": 27,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 93,
+        "counterexamples": 9,
+        "confidence": 0.9038461538461539,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 93/302，对侧命中 9/348，区分度 0.74，例外率 8.82%。"
+      },
+      {
+        "id": "gene:5b372453a18af81cdb",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:7ff463583886127e92"
+        ],
+        "generation": 27,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 109,
+        "counterexamples": 8,
+        "confidence": 0.9243697478991597,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 109/359，对侧命中 8/316，区分度 0.74，例外率 6.84%。"
+      },
+      {
+        "id": "gene:5196353ade36acc21e",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:56ba6abd02ca5906e5"
+        ],
+        "generation": 27,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 111,
+        "counterexamples": 10,
+        "confidence": 0.9105691056910569,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 111/359，对侧命中 10/316，区分度 0.74，例外率 8.26%。"
+      },
+      {
+        "id": "gene:a39c12d533818b4a60",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:b9c9a4d2dae89ff56c"
+        ],
+        "generation": 27,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 370,
+        "counterexamples": 330,
+        "confidence": 0.5284900284900285,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:182ce67f21791bdac4",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:c0ed0398bd044046d6"
+        ],
+        "generation": 27,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 330,
+        "counterexamples": 370,
+        "confidence": 0.47150997150997154,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:f1887862f9c9fab293",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:801ea8b582df7b6dbf"
+        ],
+        "generation": 27,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 118,
+        "counterexamples": 7,
+        "confidence": 0.937007874015748,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 118/330，对侧命中 7/370，区分度 0.76，例外率 5.60%。"
+      },
+      {
+        "id": "gene:7cad86613d0b6b5f40",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:fae3c7f00c65dae235"
+        ],
+        "generation": 27,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 86,
+        "counterexamples": 11,
+        "confidence": 0.8787878787878788,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 86/330，对侧命中 11/370，区分度 0.72，例外率 11.34%。"
+      },
+      {
+        "id": "gene:89321bb698e7b8bc50",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:53ea4b2ef4cd3313e5"
+        ],
+        "generation": 28,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 110,
+        "counterexamples": 5,
+        "confidence": 0.9487179487179487,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 110/348，对侧命中 5/302，区分度 0.75，例外率 4.35%。"
+      },
+      {
+        "id": "gene:14dee570764ef50649",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:02e51498e2e845bf30"
+        ],
+        "generation": 28,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 95,
+        "counterexamples": 10,
+        "confidence": 0.897196261682243,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 95/316，对侧命中 10/359，区分度 0.74，例外率 9.52%。"
+      },
+      {
+        "id": "gene:b470ad27751e46fa2b",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:5b372453a18af81cdb"
+        ],
+        "generation": 28,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 113,
+        "counterexamples": 9,
+        "confidence": 0.9193548387096774,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 113/370，对侧命中 9/330，区分度 0.74，例外率 7.38%。"
+      },
+      {
+        "id": "gene:d8b2590cfd5ae5389b",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:5196353ade36acc21e"
+        ],
+        "generation": 28,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 115,
+        "counterexamples": 11,
+        "confidence": 0.90625,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 115/370，对侧命中 11/330，区分度 0.74，例外率 8.73%。"
+      },
+      {
+        "id": "gene:4045a8ba3c999b8329",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:a39c12d533818b4a60"
+        ],
+        "generation": 28,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 381,
+        "counterexamples": 344,
+        "confidence": 0.5254470426409904,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:5a6f23d574b3c22fb0",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:182ce67f21791bdac4"
+        ],
+        "generation": 28,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 344,
+        "counterexamples": 381,
+        "confidence": 0.47455295735900965,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:6cfa3eaef1ab37fe40",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:f1887862f9c9fab293"
+        ],
+        "generation": 28,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 123,
+        "counterexamples": 7,
+        "confidence": 0.9393939393939394,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 123/344，对侧命中 7/381，区分度 0.76，例外率 5.38%。"
+      },
+      {
+        "id": "gene:df64b46592cd6101e0",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:7cad86613d0b6b5f40"
+        ],
+        "generation": 28,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 87,
+        "counterexamples": 13,
+        "confidence": 0.8627450980392157,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 87/344，对侧命中 13/381，区分度 0.72，例外率 13.00%。"
+      },
+      {
+        "id": "gene:34663657fa8fa52ffc",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:89321bb698e7b8bc50"
+        ],
+        "generation": 29,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 112,
+        "counterexamples": 6,
+        "confidence": 0.9416666666666667,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 112/359，对侧命中 6/316，区分度 0.75，例外率 5.08%。"
+      },
+      {
+        "id": "gene:ffbb9e8c862c099d5f",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:14dee570764ef50649"
+        ],
+        "generation": 29,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 100,
+        "counterexamples": 10,
+        "confidence": 0.9017857142857143,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 100/330，对侧命中 10/370，区分度 0.74，例外率 9.09%。"
+      },
+      {
+        "id": "gene:25aa76d89efaf9dbc3",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:b470ad27751e46fa2b"
+        ],
+        "generation": 29,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 115,
+        "counterexamples": 9,
+        "confidence": 0.9206349206349206,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 115/381，对侧命中 9/344，区分度 0.74，例外率 7.26%。"
+      },
+      {
+        "id": "gene:9616516f81a9a370a5",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:d8b2590cfd5ae5389b"
+        ],
+        "generation": 29,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 120,
+        "counterexamples": 12,
+        "confidence": 0.9029850746268657,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 120/381，对侧命中 12/344，区分度 0.74，例外率 9.09%。"
+      },
+      {
+        "id": "gene:46fa422018c4015bde",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:4045a8ba3c999b8329"
+        ],
+        "generation": 29,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 395,
+        "counterexamples": 355,
+        "confidence": 0.526595744680851,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:dc985c64050936c18a",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:5a6f23d574b3c22fb0"
+        ],
+        "generation": 29,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 355,
+        "counterexamples": 395,
+        "confidence": 0.4734042553191489,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:823fec2a0507b0d07d",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:6cfa3eaef1ab37fe40"
+        ],
+        "generation": 29,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 127,
+        "counterexamples": 7,
+        "confidence": 0.9411764705882353,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 127/355，对侧命中 7/395，区分度 0.76，例外率 5.22%。"
+      },
+      {
+        "id": "gene:3f8dcf0512cd40fdd1",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:df64b46592cd6101e0"
+        ],
+        "generation": 29,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 93,
+        "counterexamples": 13,
+        "confidence": 0.8703703703703703,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 93/355，对侧命中 13/395，区分度 0.72，例外率 12.26%。"
+      },
+      {
+        "id": "gene:16ac3dfcae58533579",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:34663657fa8fa52ffc"
+        ],
+        "generation": 30,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 114,
+        "counterexamples": 6,
+        "confidence": 0.9426229508196722,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 114/370，对侧命中 6/330，区分度 0.75，例外率 5.00%。"
+      },
+      {
+        "id": "gene:7560cd2d0c5e6c28e7",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:ffbb9e8c862c099d5f"
+        ],
+        "generation": 30,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 106,
+        "counterexamples": 10,
+        "confidence": 0.9067796610169492,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 106/344，对侧命中 10/381，区分度 0.74，例外率 8.62%。"
+      },
+      {
+        "id": "gene:eb5e6314b21e280cb0",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:25aa76d89efaf9dbc3"
+        ],
+        "generation": 30,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 118,
+        "counterexamples": 9,
+        "confidence": 0.9224806201550387,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 118/395，对侧命中 9/355，区分度 0.74，例外率 7.09%。"
+      },
+      {
+        "id": "gene:103fb85f8beba9de0f",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:9616516f81a9a370a5"
+        ],
+        "generation": 30,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 123,
+        "counterexamples": 12,
+        "confidence": 0.9051094890510949,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 123/395，对侧命中 12/355，区分度 0.74，例外率 8.89%。"
+      },
+      {
+        "id": "gene:ad92bac9c0ce840ec3",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:46fa422018c4015bde"
+        ],
+        "generation": 30,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 404,
+        "counterexamples": 371,
+        "confidence": 0.5212355212355212,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:c90cff784b1512ea0e",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:dc985c64050936c18a"
+        ],
+        "generation": 30,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 371,
+        "counterexamples": 404,
+        "confidence": 0.47876447876447875,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:97f3d3842010e78176",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:823fec2a0507b0d07d"
+        ],
+        "generation": 30,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 132,
+        "counterexamples": 7,
+        "confidence": 0.9432624113475178,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 132/371，对侧命中 7/404，区分度 0.76，例外率 5.04%。"
+      },
+      {
+        "id": "gene:4dc20df75d7a3bbdc6",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:3f8dcf0512cd40fdd1"
+        ],
+        "generation": 30,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 98,
+        "counterexamples": 13,
+        "confidence": 0.8761061946902655,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 98/371，对侧命中 13/404，区分度 0.72，例外率 11.71%。"
+      },
+      {
+        "id": "gene:3a29fc9e4a4d64a43d",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:16ac3dfcae58533579"
+        ],
+        "generation": 31,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 116,
+        "counterexamples": 7,
+        "confidence": 0.936,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 116/381，对侧命中 7/344，区分度 0.74，例外率 5.69%。"
+      },
+      {
+        "id": "gene:49b83524fff5c12161",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:7560cd2d0c5e6c28e7"
+        ],
+        "generation": 31,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 107,
+        "counterexamples": 10,
+        "confidence": 0.907563025210084,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 107/355，对侧命中 10/395，区分度 0.74，例外率 8.55%。"
+      },
+      {
+        "id": "gene:1e2e8a5c22d88d5f00",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:eb5e6314b21e280cb0"
+        ],
+        "generation": 31,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 120,
+        "counterexamples": 9,
+        "confidence": 0.9236641221374046,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 120/404，对侧命中 9/371，区分度 0.74，例外率 6.98%。"
+      },
+      {
+        "id": "gene:f3ed335aee548cf529",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:103fb85f8beba9de0f"
+        ],
+        "generation": 31,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 126,
+        "counterexamples": 13,
+        "confidence": 0.900709219858156,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 126/404，对侧命中 13/371，区分度 0.74，例外率 9.35%。"
+      },
+      {
+        "id": "gene:53b2a5e9390544b2e3",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:ad92bac9c0ce840ec3"
+        ],
+        "generation": 31,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 416,
+        "counterexamples": 384,
+        "confidence": 0.5199501246882793,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:11833e0f490aaa276d",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:c90cff784b1512ea0e"
+        ],
+        "generation": 31,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 384,
+        "counterexamples": 416,
+        "confidence": 0.4800498753117207,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:f1fa9daef376c95b9e",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:4dc20df75d7a3bbdc6"
+        ],
+        "generation": 31,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 104,
+        "counterexamples": 14,
+        "confidence": 0.875,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 104/384，对侧命中 14/416，区分度 0.72，例外率 11.86%。"
+      },
+      {
+        "id": "gene:7d614f86703a12846f",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:97f3d3842010e78176"
+        ],
+        "generation": 31,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 134,
+        "counterexamples": 7,
+        "confidence": 0.9440559440559441,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 134/400，对侧命中 7/425，区分度 0.76，例外率 4.96%。"
+      },
+      {
+        "id": "gene:021fd538881b24c67d",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:3a29fc9e4a4d64a43d"
+        ],
+        "generation": 32,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 124,
+        "counterexamples": 7,
+        "confidence": 0.9398496240601504,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 124/395，对侧命中 7/355，区分度 0.75，例外率 5.34%。"
+      },
+      {
+        "id": "gene:e7c36a345762f8e0e1",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:49b83524fff5c12161"
+        ],
+        "generation": 32,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 112,
+        "counterexamples": 11,
+        "confidence": 0.904,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 112/371，对侧命中 11/404，区分度 0.74，例外率 8.94%。"
+      },
+      {
+        "id": "gene:5eb23718357857e136",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:1e2e8a5c22d88d5f00"
+        ],
+        "generation": 32,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 122,
+        "counterexamples": 11,
+        "confidence": 0.9111111111111111,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 122/416，对侧命中 11/384，区分度 0.73，例外率 8.27%。"
+      },
+      {
+        "id": "gene:c8d43eae8009171ac4",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:f3ed335aee548cf529"
+        ],
+        "generation": 32,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 131,
+        "counterexamples": 15,
+        "confidence": 0.8918918918918919,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 131/416，对侧命中 15/384，区分度 0.73，例外率 10.27%。"
+      },
+      {
+        "id": "gene:b712c1a51225404487",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:53b2a5e9390544b2e3"
+        ],
+        "generation": 32,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 425,
+        "counterexamples": 400,
+        "confidence": 0.5151148730350665,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:2b4c7c22ffed3ce00e",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:11833e0f490aaa276d"
+        ],
+        "generation": 32,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 400,
+        "counterexamples": 425,
+        "confidence": 0.4848851269649335,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:c28b5ef644f71469c2",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:f1fa9daef376c95b9e"
+        ],
+        "generation": 32,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 109,
+        "counterexamples": 14,
+        "confidence": 0.88,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 109/400，对侧命中 14/425，区分度 0.72，例外率 11.38%。"
+      },
+      {
+        "id": "gene:f645d13116398952ef",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:7d614f86703a12846f"
+        ],
+        "generation": 32,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 138,
+        "counterexamples": 7,
+        "confidence": 0.9455782312925171,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 138/411，对侧命中 7/439，区分度 0.76，例外率 4.83%。"
+      },
+      {
+        "id": "gene:27488cc0861c1ca3c2",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:021fd538881b24c67d"
+        ],
+        "generation": 33,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 127,
+        "counterexamples": 7,
+        "confidence": 0.9411764705882353,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 127/404，对侧命中 7/371，区分度 0.75，例外率 5.22%。"
+      },
+      {
+        "id": "gene:5e45863e7c6cfc7c15",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:e7c36a345762f8e0e1"
+        ],
+        "generation": 33,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 114,
+        "counterexamples": 13,
+        "confidence": 0.8914728682170543,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 114/384，对侧命中 13/416，区分度 0.73，例外率 10.24%。"
+      },
+      {
+        "id": "gene:747556fe510a8ef036",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:5eb23718357857e136"
+        ],
+        "generation": 33,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 124,
+        "counterexamples": 11,
+        "confidence": 0.9124087591240876,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 124/425，对侧命中 11/400，区分度 0.73，例外率 8.15%。"
+      },
+      {
+        "id": "gene:f2e896ca72806c2c71",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:c8d43eae8009171ac4"
+        ],
+        "generation": 33,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 134,
+        "counterexamples": 15,
+        "confidence": 0.8940397350993378,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 134/425，对侧命中 15/400，区分度 0.74，例外率 10.07%。"
+      },
+      {
+        "id": "gene:e92abffd210b8f220d",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:b712c1a51225404487"
+        ],
+        "generation": 33,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 439,
+        "counterexamples": 411,
+        "confidence": 0.5164319248826291,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:42d659e7e6683d8274",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:2b4c7c22ffed3ce00e"
+        ],
+        "generation": 33,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 411,
+        "counterexamples": 439,
+        "confidence": 0.4835680751173709,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:669da24cb4c3cabb13",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:c28b5ef644f71469c2"
+        ],
+        "generation": 33,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 114,
+        "counterexamples": 16,
+        "confidence": 0.8712121212121212,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 114/411，对侧命中 16/439，区分度 0.72，例外率 12.31%。"
+      },
+      {
+        "id": "gene:962e14671846a209e0",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:f645d13116398952ef"
+        ],
+        "generation": 33,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 143,
+        "counterexamples": 7,
+        "confidence": 0.9473684210526315,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 143/428，对侧命中 7/447，区分度 0.76，例外率 4.67%。"
+      },
+      {
+        "id": "gene:51893d4e8d1dd5f74c",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:27488cc0861c1ca3c2"
+        ],
+        "generation": 34,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 129,
+        "counterexamples": 8,
+        "confidence": 0.935251798561151,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 129/416，对侧命中 8/384，区分度 0.74，例外率 5.84%。"
+      },
+      {
+        "id": "gene:e57bd125a79dad99b2",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:5e45863e7c6cfc7c15"
+        ],
+        "generation": 34,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 123,
+        "counterexamples": 13,
+        "confidence": 0.8985507246376812,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 123/400，对侧命中 13/425，区分度 0.74，例外率 9.56%。"
+      },
+      {
+        "id": "gene:fbf1b478d08f69bf48",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:747556fe510a8ef036"
+        ],
+        "generation": 34,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 128,
+        "counterexamples": 11,
+        "confidence": 0.9148936170212766,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 128/439，对侧命中 11/411，区分度 0.73，例外率 7.91%。"
+      },
+      {
+        "id": "gene:95352bfdd94a493a57",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:f2e896ca72806c2c71"
+        ],
+        "generation": 34,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 138,
+        "counterexamples": 15,
+        "confidence": 0.896774193548387,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 138/439，对侧命中 15/411，区分度 0.74，例外率 9.80%。"
+      },
+      {
+        "id": "gene:76a07a53fbbd95efce",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:e92abffd210b8f220d"
+        ],
+        "generation": 34,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 447,
+        "counterexamples": 428,
+        "confidence": 0.5108323831242874,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:04a42f0d22ecc85b8d",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:42d659e7e6683d8274"
+        ],
+        "generation": 34,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 428,
+        "counterexamples": 447,
+        "confidence": 0.48916761687571264,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:45cdd31e8dce5bbaeb",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:669da24cb4c3cabb13"
+        ],
+        "generation": 34,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 115,
+        "counterexamples": 16,
+        "confidence": 0.8721804511278195,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 115/428，对侧命中 16/447，区分度 0.72，例外率 12.21%。"
+      },
+      {
+        "id": "gene:e4e352406dc157aa07",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:962e14671846a209e0"
+        ],
+        "generation": 34,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 147,
+        "counterexamples": 9,
+        "confidence": 0.9367088607594937,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 147/438，对侧命中 9/462，区分度 0.75，例外率 5.77%。"
+      },
+      {
+        "id": "gene:0ceeee2caa9fc166a0",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:51893d4e8d1dd5f74c"
+        ],
+        "generation": 35,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 133,
+        "counterexamples": 8,
+        "confidence": 0.9370629370629371,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 133/425，对侧命中 8/400，区分度 0.75，例外率 5.67%。"
+      },
+      {
+        "id": "gene:1c402e07aa0394ab8b",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:e57bd125a79dad99b2"
+        ],
+        "generation": 35,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 125,
+        "counterexamples": 14,
+        "confidence": 0.8936170212765957,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 125/411，对侧命中 14/439，区分度 0.74，例外率 10.07%。"
+      },
+      {
+        "id": "gene:529202b73053c28eaf",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:fbf1b478d08f69bf48"
+        ],
+        "generation": 35,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 130,
+        "counterexamples": 12,
+        "confidence": 0.9097222222222222,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 130/447，对侧命中 12/428，区分度 0.73，例外率 8.45%。"
+      },
+      {
+        "id": "gene:4037afee22219aa1e0",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:95352bfdd94a493a57"
+        ],
+        "generation": 35,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 141,
+        "counterexamples": 16,
+        "confidence": 0.8930817610062893,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 141/447，对侧命中 16/428，区分度 0.74，例外率 10.19%。"
+      },
+      {
+        "id": "gene:c857ed94711a8c10a3",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:76a07a53fbbd95efce"
+        ],
+        "generation": 35,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 462,
+        "counterexamples": 438,
+        "confidence": 0.5133037694013304,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:afcedc23a5f696822e",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:04a42f0d22ecc85b8d"
+        ],
+        "generation": 35,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 438,
+        "counterexamples": 462,
+        "confidence": 0.4866962305986696,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:8df19153181ffb42ac",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:45cdd31e8dce5bbaeb"
+        ],
+        "generation": 35,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 117,
+        "counterexamples": 17,
+        "confidence": 0.8676470588235294,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 117/438，对侧命中 17/462，区分度 0.72，例外率 12.69%。"
+      },
+      {
+        "id": "gene:2062084d570f85a3af",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:e4e352406dc157aa07"
+        ],
+        "generation": 35,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 147,
+        "counterexamples": 10,
+        "confidence": 0.9308176100628931,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 147/446，对侧命中 10/479，区分度 0.75，例外率 6.37%。"
+      },
+      {
+        "id": "gene:c4abf6e7bc78a9a824",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:0ceeee2caa9fc166a0"
+        ],
+        "generation": 36,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 136,
+        "counterexamples": 8,
+        "confidence": 0.9383561643835616,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 136/439，对侧命中 8/411，区分度 0.75，例外率 5.56%。"
+      },
+      {
+        "id": "gene:a8ea47c33cab76b6a3",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:1c402e07aa0394ab8b"
+        ],
+        "generation": 36,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 133,
+        "counterexamples": 14,
+        "confidence": 0.8993288590604027,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 133/428，对侧命中 14/447，区分度 0.74，例外率 9.52%。"
+      },
+      {
+        "id": "gene:b41b3d64ca7a03a857",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:529202b73053c28eaf"
+        ],
+        "generation": 36,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 133,
+        "counterexamples": 12,
+        "confidence": 0.9115646258503401,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 133/462，对侧命中 12/438，区分度 0.73，例外率 8.28%。"
+      },
+      {
+        "id": "gene:70094d9a53c522821e",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:4037afee22219aa1e0"
+        ],
+        "generation": 36,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 147,
+        "counterexamples": 16,
+        "confidence": 0.896969696969697,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 147/462，对侧命中 16/438，区分度 0.74，例外率 9.82%。"
+      },
+      {
+        "id": "gene:08de37b8f20d60fff7",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:c857ed94711a8c10a3"
+        ],
+        "generation": 36,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 479,
+        "counterexamples": 446,
+        "confidence": 0.517799352750809,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:d75ac22ce730d69a2e",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:afcedc23a5f696822e"
+        ],
+        "generation": 36,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 446,
+        "counterexamples": 479,
+        "confidence": 0.48220064724919093,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:a139ba68cf11947202",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:8df19153181ffb42ac"
+        ],
+        "generation": 36,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 121,
+        "counterexamples": 17,
+        "confidence": 0.8714285714285714,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 121/446，对侧命中 17/479，区分度 0.72，例外率 12.32%。"
+      },
+      {
+        "id": "gene:781c1983bb6b2039d2",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:2062084d570f85a3af"
+        ],
+        "generation": 36,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 150,
+        "counterexamples": 11,
+        "confidence": 0.9263803680981595,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 150/458，对侧命中 11/492，区分度 0.75，例外率 6.83%。"
+      },
+      {
+        "id": "gene:838db39ae51151a4bf",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:c4abf6e7bc78a9a824"
+        ],
+        "generation": 37,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 139,
+        "counterexamples": 9,
+        "confidence": 0.9333333333333333,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 139/447，对侧命中 9/428，区分度 0.75，例外率 6.08%。"
+      },
+      {
+        "id": "gene:891cbfa4bb5466bbf1",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:a8ea47c33cab76b6a3"
+        ],
+        "generation": 37,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 137,
+        "counterexamples": 14,
+        "confidence": 0.9019607843137255,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 137/438，对侧命中 14/462，区分度 0.74，例外率 9.27%。"
+      },
+      {
+        "id": "gene:709356f148e765f748",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:b41b3d64ca7a03a857"
+        ],
+        "generation": 37,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 140,
+        "counterexamples": 12,
+        "confidence": 0.9155844155844156,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 140/479，对侧命中 12/446，区分度 0.73，例外率 7.89%。"
+      },
+      {
+        "id": "gene:78f1633a103363d4ad",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:70094d9a53c522821e"
+        ],
+        "generation": 37,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 153,
+        "counterexamples": 16,
+        "confidence": 0.9005847953216374,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 153/479，对侧命中 16/446，区分度 0.74，例外率 9.47%。"
+      },
+      {
+        "id": "gene:b51b132eaf3522c75f",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:08de37b8f20d60fff7"
+        ],
+        "generation": 37,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 492,
+        "counterexamples": 458,
+        "confidence": 0.5178571428571429,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:36a61e29dc4a783e30",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:d75ac22ce730d69a2e"
+        ],
+        "generation": 37,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 458,
+        "counterexamples": 492,
+        "confidence": 0.48214285714285715,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:2e986246d912175b74",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:a139ba68cf11947202"
+        ],
+        "generation": 37,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 124,
+        "counterexamples": 18,
+        "confidence": 0.8680555555555556,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 124/458，对侧命中 18/492，区分度 0.72，例外率 12.68%。"
+      },
+      {
+        "id": "gene:ac4e699946cce0cdf7",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:781c1983bb6b2039d2"
+        ],
+        "generation": 37,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 153,
+        "counterexamples": 12,
+        "confidence": 0.9221556886227545,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 153/466，对侧命中 12/509，区分度 0.75，例外率 7.27%。"
+      },
+      {
+        "id": "gene:54a7d34d757a9d9afd",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:838db39ae51151a4bf"
+        ],
+        "generation": 38,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 142,
+        "counterexamples": 9,
+        "confidence": 0.934640522875817,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 142/462，对侧命中 9/438，区分度 0.74，例外率 5.96%。"
+      },
+      {
+        "id": "gene:1e2231c7086a8af461",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:891cbfa4bb5466bbf1"
+        ],
+        "generation": 38,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 140,
+        "counterexamples": 14,
+        "confidence": 0.9038461538461539,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 140/446，对侧命中 14/479，区分度 0.74，例外率 9.09%。"
+      },
+      {
+        "id": "gene:2fd957f80af4c18259",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:709356f148e765f748"
+        ],
+        "generation": 38,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 142,
+        "counterexamples": 12,
+        "confidence": 0.9166666666666666,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 142/492，对侧命中 12/458，区分度 0.73，例外率 7.79%。"
+      },
+      {
+        "id": "gene:3986cc7f6b4599789a",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:78f1633a103363d4ad"
+        ],
+        "generation": 38,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 157,
+        "counterexamples": 16,
+        "confidence": 0.9028571428571428,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 157/492，对侧命中 16/458，区分度 0.74，例外率 9.25%。"
+      },
+      {
+        "id": "gene:aabf1ae059391a26a0",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:b51b132eaf3522c75f"
+        ],
+        "generation": 38,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 509,
+        "counterexamples": 466,
+        "confidence": 0.5220061412487206,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:312d7bcd746afa145d",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:36a61e29dc4a783e30"
+        ],
+        "generation": 38,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 466,
+        "counterexamples": 509,
+        "confidence": 0.4779938587512794,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:06ad94b611804e8000",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:2e986246d912175b74"
+        ],
+        "generation": 38,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 127,
+        "counterexamples": 20,
+        "confidence": 0.8590604026845637,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 127/466，对侧命中 20/509，区分度 0.72，例外率 13.61%。"
+      },
+      {
+        "id": "gene:05d25935a51c142a78",
+        "rule_ref": "variant:evo-2116391fb768c237",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:ac4e699946cce0cdf7"
+        ],
+        "generation": 38,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 是 安全支持"
+        ],
+        "support": 157,
+        "counterexamples": 12,
+        "confidence": 0.9239766081871345,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 安全支持；本组覆盖 157/480，对侧命中 12/520，区分度 0.75，例外率 7.10%。"
+      },
+      {
+        "id": "gene:541cfc652db241664b",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:54a7d34d757a9d9afd"
+        ],
+        "generation": 39,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 145,
+        "counterexamples": 10,
+        "confidence": 0.9299363057324841,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 145/479，对侧命中 10/446，区分度 0.74，例外率 6.45%。"
+      },
+      {
+        "id": "gene:829fed83fd6b7d5bb0",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:1e2231c7086a8af461"
+        ],
+        "generation": 39,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 146,
+        "counterexamples": 14,
+        "confidence": 0.9074074074074074,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 146/458，对侧命中 14/492，区分度 0.74，例外率 8.75%。"
+      },
+      {
+        "id": "gene:6a4f79dfe4306cf50f",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:2fd957f80af4c18259"
+        ],
+        "generation": 39,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 147,
+        "counterexamples": 12,
+        "confidence": 0.9192546583850931,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 147/509，对侧命中 12/466，区分度 0.73，例外率 7.55%。"
+      },
+      {
+        "id": "gene:9e0b3b9c4ac108540f",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:3986cc7f6b4599789a"
+        ],
+        "generation": 39,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 161,
+        "counterexamples": 16,
+        "confidence": 0.9050279329608939,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 161/509，对侧命中 16/466，区分度 0.74，例外率 9.04%。"
+      },
+      {
+        "id": "gene:3aacb677e32354b064",
+        "rule_ref": "candidate:tri-8ea57de13695",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-8ea57de13695",
+        "parent_ids": [
+          "gene:aabf1ae059391a26a0"
+        ],
+        "generation": 39,
+        "mutation": "evidence_revision",
+        "status": "provisional",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [],
+        "support": 520,
+        "counterexamples": 480,
+        "confidence": 0.5199600798403193,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 provisional 演化为 provisional。"
+      },
+      {
+        "id": "gene:7f1514ca0f57805093",
+        "rule_ref": "candidate:tri-fc350fe98491",
+        "rule_kind": "learned_candidate",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:312d7bcd746afa145d"
+        ],
+        "generation": 39,
+        "mutation": "evidence_revision",
+        "status": "rejected",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [],
+        "support": 480,
+        "counterexamples": 520,
+        "confidence": 0.48003992015968067,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "新增证据后由 rejected 演化为 rejected。"
+      },
+      {
+        "id": "gene:56424d5eef3cf7c5c0",
+        "rule_ref": "variant:evo-8c9f6ea402726e47",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:06ad94b611804e8000"
+        ],
+        "generation": 39,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 充分休息"
+        ],
+        "support": 130,
+        "counterexamples": 20,
+        "confidence": 0.8618421052631579,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 充分休息；本组覆盖 130/480，对侧命中 20/520，区分度 0.72，例外率 13.33%。"
+      },
+      {
+        "id": "gene:dfe21284c27a1055d0",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:541cfc652db241664b"
+        ],
+        "generation": 40,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 150,
+        "counterexamples": 10,
+        "confidence": 0.9320987654320988,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 150/492，对侧命中 10/458，区分度 0.74，例外率 6.25%。"
+      },
+      {
+        "id": "gene:3a51997a57352b10c8",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:829fed83fd6b7d5bb0"
+        ],
+        "generation": 40,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 148,
+        "counterexamples": 15,
+        "confidence": 0.9030303030303031,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 148/466，对侧命中 15/509，区分度 0.74，例外率 9.20%。"
+      },
+      {
+        "id": "gene:1d7f571a48e8770cfa",
+        "rule_ref": "variant:evo-3b232518fb66c6f4",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:6a4f79dfe4306cf50f"
+        ],
+        "generation": 40,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 是 高风险"
+        ],
+        "support": 151,
+        "counterexamples": 13,
+        "confidence": 0.9156626506024096,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 是 高风险；本组覆盖 151/520，对侧命中 13/480，区分度 0.73，例外率 7.93%。"
+      },
+      {
+        "id": "gene:fb48bb418f1d861390",
+        "rule_ref": "variant:evo-236d853a8524d2d8",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:9e0b3b9c4ac108540f"
+        ],
+        "generation": 40,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 处于 孤立"
+        ],
+        "support": 163,
+        "counterexamples": 16,
+        "confidence": 0.9060773480662984,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 处于 孤立；本组覆盖 163/520，对侧命中 16/480，区分度 0.74，例外率 8.94%。"
+      },
+      {
+        "id": "gene:3ee5bb51cc2c821a95",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:dfe21284c27a1055d0"
+        ],
+        "generation": 41,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 154,
+        "counterexamples": 10,
+        "confidence": 0.9337349397590361,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 154/509，对侧命中 10/466，区分度 0.74，例外率 6.10%。"
+      },
+      {
+        "id": "gene:f04891657e09767ec2",
+        "rule_ref": "variant:evo-56f5afca5ca46a35",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:3a51997a57352b10c8"
+        ],
+        "generation": 41,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 间接导致 ?z",
+        "conditions": [
+          "?x 有 合作"
+        ],
+        "support": 154,
+        "counterexamples": 15,
+        "confidence": 0.9064327485380117,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 合作；本组覆盖 154/480，对侧命中 15/520，区分度 0.74，例外率 8.88%。"
+      },
+      {
+        "id": "gene:3af04cbfcb3fc943f3",
+        "rule_ref": "variant:evo-2058f2c649bb679d",
+        "rule_kind": "evolved_variant",
+        "base_signature": "tri-fc350fe98491",
+        "parent_ids": [
+          "gene:3ee5bb51cc2c821a95"
+        ],
+        "generation": 42,
+        "mutation": "variant_revision",
+        "status": "verified_conditional_global",
+        "premises": [
+          "?x 导致 ?y",
+          "?y 导致 ?z"
+        ],
+        "conclusion": "?x 不间接导致 ?z",
+        "conditions": [
+          "?x 有 睡眠不足"
+        ],
+        "support": 159,
+        "counterexamples": 10,
+        "confidence": 0.935672514619883,
+        "environments": [
+          "城市",
+          "学校",
+          "家庭",
+          "工作",
+          "研究"
+        ],
+        "rationale": "正反案例分离条件：?x 有 睡眠不足；本组覆盖 159/520，对侧命中 10/480，区分度 0.74，例外率 5.92%。"
+      }
+    ],
+    "total_nodes": 315,
+    "latest_rule_refs": 9,
+    "max_generation": 42,
+    "authority": "audit-history-not-direct-proof"
+  },
+  "final_active_tests": [
+    {
+      "id": "test:2f9d1888459e19a70b",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-56f5afca5ca46a35",
+      "hypothesis_b": "evo-236d853a8524d2d8",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 处于 孤立",
+        "?x 有 合作"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 处于 孤立；?x 有 合作。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.9994863114145054,
+      "priority": 0.9725001810063139,
+      "environment": null,
+      "status": "resolved",
+      "outcome": "positive-supported",
+      "resolved_experience_id": "7ffcff59-b965-4084-b47f-2528c676692b"
+    },
+    {
+      "id": "test:1b9fbb928a03b6a1cc",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-2116391fb768c237",
+      "hypothesis_b": "evo-3b232518fb66c6f4",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 是 安全支持",
+        "?x 是 高风险"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 是 安全支持；?x 是 高风险。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.9973141793608491,
+      "priority": 0.9703866965181063,
+      "environment": null,
+      "status": "resolved",
+      "outcome": "opposite-supported",
+      "resolved_experience_id": "51bdce7f-762c-4e00-b483-b5c1ef92aa27"
+    },
+    {
+      "id": "test:6624575d9edc482e73",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-56f5afca5ca46a35",
+      "hypothesis_b": "evo-3b232518fb66c6f4",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 是 高风险",
+        "?x 有 合作"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 是 高风险；?x 有 合作。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.9971821762480801,
+      "priority": 0.9702582574893821,
+      "environment": null,
+      "status": "resolved",
+      "outcome": "opposite-supported",
+      "resolved_experience_id": "f002ffb6-f7e7-40c2-bad9-f1a78b1f4037"
+    },
+    {
+      "id": "test:bd8d8f3434ce3ff635",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-2116391fb768c237",
+      "hypothesis_b": "evo-2058f2c649bb679d",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 是 安全支持",
+        "?x 有 睡眠不足"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 是 安全支持；?x 有 睡眠不足。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.9964710010778861,
+      "priority": 0.9695662840487833,
+      "environment": null,
+      "status": "resolved",
+      "outcome": "positive-supported",
+      "resolved_experience_id": "94d08ba3-745f-4c5d-b37e-c1766934ea71"
+    },
+    {
+      "id": "test:e7edd27645f3f32dbc",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-2116391fb768c237",
+      "hypothesis_b": "evo-236d853a8524d2d8",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 处于 孤立",
+        "?x 是 安全支持"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 处于 孤立；?x 是 安全支持。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.9944526924444159,
+      "priority": 0.9676024697484168,
+      "environment": null,
+      "status": "resolved",
+      "outcome": "opposite-supported",
+      "resolved_experience_id": "b748c659-9589-4005-bb84-b5f77af4c2ba"
+    },
+    {
+      "id": "test:17516a24bc9f0d0495",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-56f5afca5ca46a35",
+      "hypothesis_b": "evo-2058f2c649bb679d",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 有 合作",
+        "?x 有 睡眠不足"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 有 合作；?x 有 睡眠不足。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.9910992118779228,
+      "priority": 0.964339533157219,
+      "environment": null,
+      "status": "resolved",
+      "outcome": "opposite-supported",
+      "resolved_experience_id": "f9eb0056-c572-47bf-815c-0f0fdc4fa30f"
+    },
+    {
+      "id": "test:3147cd102b9f4ee891",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-8c9f6ea402726e47",
+      "hypothesis_b": "evo-3b232518fb66c6f4",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 是 高风险",
+        "?x 有 充分休息"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 是 高风险；?x 有 充分休息。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.9810310792993133,
+      "priority": 0.954543240158232,
+      "environment": null,
+      "status": "resolved",
+      "outcome": "opposite-supported",
+      "resolved_experience_id": "9c1091c3-f359-4b8d-abc1-a79c004c9f02"
+    },
+    {
+      "id": "test:ed411efd5505295db6",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-8c9f6ea402726e47",
+      "hypothesis_b": "evo-236d853a8524d2d8",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 处于 孤立",
+        "?x 有 充分休息"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 处于 孤立；?x 有 充分休息。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.980310578895057,
+      "priority": 0.9538421932648906,
+      "environment": null,
+      "status": "resolved",
+      "outcome": "opposite-supported",
+      "resolved_experience_id": "1403548b-af6f-4c34-aedf-8a25c3a6db12"
+    },
+    {
+      "id": "test:70b807d33d47d5c6af",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-8c9f6ea402726e47",
+      "hypothesis_b": "evo-2058f2c649bb679d",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 有 充分休息",
+        "?x 有 睡眠不足"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 有 充分休息；?x 有 睡眠不足。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.9727578725602808,
+      "priority": 0.9464934100011533,
+      "environment": null,
+      "status": "resolved",
+      "outcome": "positive-supported",
+      "resolved_experience_id": "ba41e03b-747c-4391-92bd-9a70294842a1"
+    },
+    {
+      "id": "test:7cc25a96bf979bff01",
+      "base_signature": "tri-8ea57de13695",
+      "hypothesis_a": "?x 不间接导致 ?z",
+      "hypothesis_b": "非 ?x 不间接导致 ?z",
+      "target": "?x 不间接导致 ?z",
+      "conditions": [
+        "未知区分条件"
+      ],
+      "question": "正反案例同时存在，但尚未找到区分条件。应主动收集环境、主体状态和上下文条件。",
+      "expected_information_gain": 0.96,
+      "priority": 0.9023999999999999,
+      "environment": null,
+      "status": "resolved",
+      "outcome": "opposite-supported",
+      "resolved_experience_id": "5d2ad42c-1f33-4f2d-b5f6-268559ca4b74"
+    },
+    {
+      "id": "test:7a9c2f9e72b06211e4",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-b67c900f50e70d47",
+      "hypothesis_b": "evo-236d853a8524d2d8",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 处于 孤立",
+        "?x 处于 高压力"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 处于 孤立；?x 处于 高压力。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.9166666666666666,
+      "priority": 0.8919166666666667,
+      "environment": null,
+      "status": "proposed",
+      "outcome": null,
+      "resolved_experience_id": null
+    },
+    {
+      "id": "test:c4fb0ea75073918f60",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-b67c900f50e70d47",
+      "hypothesis_b": "evo-2058f2c649bb679d",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 处于 高压力",
+        "?x 有 睡眠不足"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 处于 高压力；?x 有 睡眠不足。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.9022350743792484,
+      "priority": 0.8778747273710088,
+      "environment": null,
+      "status": "proposed",
+      "outcome": null,
+      "resolved_experience_id": null
+    },
+    {
+      "id": "test:363e937f27ae051832",
+      "base_signature": "tri-fc350fe98491",
+      "hypothesis_a": "evo-b67c900f50e70d47",
+      "hypothesis_b": "evo-3b232518fb66c6f4",
+      "target": "目标对象 间接导致 目标结果",
+      "conditions": [
+        "?x 处于 高压力",
+        "?x 是 高风险"
+      ],
+      "question": "为了区分两套相反理论，优先观察：?x 处于 高压力；?x 是 高风险。随后检验『目标对象 间接导致 目标结果』是否成立。",
+      "expected_information_gain": 0.8823027270368504,
+      "priority": 0.8584805534068556,
+      "environment": null,
+      "status": "proposed",
+      "outcome": null,
+      "resolved_experience_id": null
+    }
+  ],
+  "elapsed_seconds": 5.749296330999982
+}
